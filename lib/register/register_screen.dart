@@ -15,8 +15,8 @@ class RegisterScreen extends StatelessWidget {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-          // titleSpacing: 0.0,
-          // toolbarHeight: 100.0,
+          titleSpacing: 0.0,
+          toolbarHeight: 100.0,
           title: PreferredSize(
             preferredSize: const Size.fromHeight(500.0),
             child: Column(
@@ -42,7 +42,7 @@ class RegisterScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: 100.0,),
+              const SizedBox(height: 120.0,),
               Text(
                 'Welcome to Fashion Daily',
                 style: Theme.of(context)
