@@ -15,26 +15,23 @@ class RegisterScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: PreferredSize(
-          preferredSize: const Size.fromHeight(150.0),
-          child: Padding(
-            padding: const EdgeInsets.all(10.0),
-            child: Column(
-              children: [
-                Container(
-                  height: 150.0,
-                  width: double.infinity,
-                  decoration: const BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage(
-                        'https://img.freepik.com/free-vector/mixed-colors-background-childish-style_52683-25938.jpg?t=st=1656411698~exp=1656412298~hmac=9f07d66a1e33ee91aa9e58da37035dc72e84c56e9072a01ed6063a683d3f5e4c&w=740',
-                      ),
-                      fit: BoxFit.contain,
+          preferredSize: const Size.fromHeight(200.0),
+          child: Column(
+            children: [
+              Container(
+                height: 500.0,
+                width: double.infinity,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(
+                      'https://img.freepik.com/free-vector/mixed-colors-background-childish-style_52683-25938.jpg?t=st=1656411698~exp=1656412298~hmac=9f07d66a1e33ee91aa9e58da37035dc72e84c56e9072a01ed6063a683d3f5e4c&w=740',
                     ),
+                      // fit: BoxFit.contain,
                   ),
                 ),
+              ),
 
-              ],
-            ),
+            ],
           ),
         )
       ),
