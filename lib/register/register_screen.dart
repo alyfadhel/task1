@@ -142,6 +142,7 @@ class RegisterScreen extends StatelessWidget {
                   Icons.visibility,
                   color: Colors.black,
                 ),
+                isPassword: true,
               ),
               const SizedBox(
                 height: 10.0,

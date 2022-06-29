@@ -7,8 +7,8 @@ class MyTextFormField extends StatelessWidget {
   final double? radius;
   final Widget? prefix;
   String? label ;
+  bool isPassword ;
   final Widget? suffix;
-
    MyTextFormField({
     required this.controller,
     required this.type,
@@ -17,6 +17,7 @@ class MyTextFormField extends StatelessWidget {
     this.prefix,
     this.label= '',
     this.suffix,
+    this.isPassword = false,
     Key? key
   }) : super(key: key);
 
@@ -25,6 +26,7 @@ class MyTextFormField extends StatelessWidget {
     return TextFormField(
       controller: controller,
       keyboardType: type,
+      obscureText: isPassword,
       validator: validator,
       decoration: InputDecoration(
         border: OutlineInputBorder(
