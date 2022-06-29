@@ -14,27 +14,27 @@ class RegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: PreferredSize(
-          preferredSize: const Size.fromHeight(200.0),
-          child: Column(
-            children: [
-              Container(
-                height: 500.0,
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      'https://img.freepik.com/free-vector/mixed-colors-background-childish-style_52683-25938.jpg?t=st=1656411698~exp=1656412298~hmac=9f07d66a1e33ee91aa9e58da37035dc72e84c56e9072a01ed6063a683d3f5e4c&w=740',
-                    ),
+          titleSpacing: 0.0,
+          toolbarHeight: 100.0,
+          title: PreferredSize(
+            preferredSize: const Size.fromHeight(500.0),
+            child: Column(
+              children: [
+                Container(
+                  height: 500.0,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage(
+                        'https://img.freepik.com/free-vector/mixed-colors-background-childish-style_52683-25938.jpg?t=st=1656411698~exp=1656412298~hmac=9f07d66a1e33ee91aa9e58da37035dc72e84c56e9072a01ed6063a683d3f5e4c&w=740',
+                      ),
                       // fit: BoxFit.contain,
+                    ),
                   ),
                 ),
-              ),
-
-            ],
-          ),
-        )
-      ),
+              ],
+            ),
+          )),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
         child: SingleChildScrollView(
@@ -56,15 +56,15 @@ class RegisterScreen extends StatelessWidget {
                   Text(
                     'Register',
                     style: Theme.of(context).textTheme.headline4!.copyWith(
-                      color: Colors.black,
-                    ),
+                          color: Colors.black,
+                        ),
                   ),
                   const Spacer(),
                   Text(
                     'Help',
                     style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                      color: Colors.blue,
-                    ),
+                          color: Colors.blue,
+                        ),
                   ),
                   const SizedBox(
                     width: 8.0,
@@ -79,14 +79,14 @@ class RegisterScreen extends StatelessWidget {
               const SizedBox(
                 height: 20.0,
               ),
-          MyTextFormField(
-            controller: emailController,
-            type: TextInputType.emailAddress,
-            validator: (value) {
-              'Email must not be Empty';
-            },
-            radius: 10.0,
-            label: 'Email',
+              MyTextFormField(
+                controller: emailController,
+                type: TextInputType.emailAddress,
+                validator: (value) {
+                  'Email must not be Empty';
+                },
+                radius: 10.0,
+                label: 'Email',
               ),
               const SizedBox(
                 height: 10.0,
@@ -94,8 +94,8 @@ class RegisterScreen extends StatelessWidget {
               Text(
                 'Phone Number',
                 style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                  color: Colors.grey,
-                ),
+                      color: Colors.grey,
+                    ),
               ),
               const SizedBox(
                 height: 10.0,
@@ -139,7 +139,7 @@ class RegisterScreen extends StatelessWidget {
                 radius: 10.0,
                 label: 'password',
                 suffix: const Icon(
-                    Icons.visibility,
+                  Icons.visibility,
                   color: Colors.black,
                 ),
               ),
@@ -183,7 +183,7 @@ class RegisterScreen extends StatelessWidget {
                                 children: [
                                   Container(
                                     decoration:
-                                    BoxDecoration(color: Colors.blue),
+                                        BoxDecoration(color: Colors.blue),
                                     child: Image.asset(
                                       height: 50.0,
                                       'assets/images/google.png',
@@ -212,22 +212,20 @@ class RegisterScreen extends StatelessWidget {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children:
-                    [
+                    children: [
                       Text(
                         'Has any account ?',
                         style: Theme.of(context).textTheme.caption,
                       ),
                       TextButton(
-                        onPressed: ()
-                        {
+                        onPressed: () {
                           Navigator.pop(context);
                         },
                         child: Text(
                           'Sign in here',
                           style: Theme.of(context).textTheme.caption!.copyWith(
-                            color: Colors.blue,
-                          ),
+                                color: Colors.blue,
+                              ),
                         ),
                       ),
                     ],
@@ -245,7 +243,4 @@ class RegisterScreen extends StatelessWidget {
     //TODO : manipulate the selected country code here
     print("New Country selected: " + countryCode.toString());
   }
-
-
-
 }
