@@ -104,7 +104,7 @@ class LoginScreen extends StatelessWidget {
                           {
                             return 'phone number is not register';
                           }
-                          return null;
+                            return null;
                         },
                         radius: 10.0,
                         prefix: CountryCodePicker(

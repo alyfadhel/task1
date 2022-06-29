@@ -13,27 +13,30 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(120.0),
-        child: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              Container(
-                height: 120.0,
-                width: double.infinity,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      'https://img.freepik.com/free-vector/mixed-colors-background-childish-style_52683-25938.jpg?t=st=1656411698~exp=1656412298~hmac=9f07d66a1e33ee91aa9e58da37035dc72e84c56e9072a01ed6063a683d3f5e4c&w=740',
+      appBar: AppBar(
+        title: PreferredSize(
+          preferredSize: const Size.fromHeight(150.0),
+          child: Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: Column(
+              children: [
+                Container(
+                  height: 150.0,
+                  width: double.infinity,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage(
+                        'https://img.freepik.com/free-vector/mixed-colors-background-childish-style_52683-25938.jpg?t=st=1656411698~exp=1656412298~hmac=9f07d66a1e33ee91aa9e58da37035dc72e84c56e9072a01ed6063a683d3f5e4c&w=740',
+                      ),
+                      fit: BoxFit.contain,
                     ),
-                    fit: BoxFit.contain,
                   ),
                 ),
-              ),
-            ],
+
+              ],
+            ),
           ),
-        ),
+        )
       ),
       body: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -219,7 +222,10 @@ class RegisterScreen extends StatelessWidget {
                         style: Theme.of(context).textTheme.caption,
                       ),
                       TextButton(
-                        onPressed: (){},
+                        onPressed: ()
+                        {
+                          Navigator.pop(context);
+                        },
                         child: Text(
                           'Sign in here',
                           style: Theme.of(context).textTheme.caption!.copyWith(
@@ -242,4 +248,7 @@ class RegisterScreen extends StatelessWidget {
     //TODO : manipulate the selected country code here
     print("New Country selected: " + countryCode.toString());
   }
+
+
+
 }
