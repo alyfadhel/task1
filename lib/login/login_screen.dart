@@ -15,14 +15,15 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(250.0),
+        preferredSize: const Size.fromHeight(200.0),
         child: Padding(
           padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
               Container(
-                height: 250.0,
+                height: 200.0,
                 width: double.infinity,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
@@ -45,6 +46,9 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(
+                  height: 200.0,
+                ),
                 Text(
                   'Welcome to Fashion Daily',
                   style: Theme.of(context)
